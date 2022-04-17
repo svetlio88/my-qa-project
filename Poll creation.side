@@ -1,0 +1,147 @@
+{
+  "id": "ea9f3076-b51e-47fb-995b-1ec6e69348a3",
+  "version": "2.0",
+  "name": "Poll creation",
+  "url": "http://poll-app5-20220113.softacad.bg/polls",
+  "tests": [{
+    "id": "7f132515-ed5a-4908-8f76-2b84dd1db105",
+    "name": "Poll creation",
+    "commands": [{
+      "id": "9bd0e3d0-a36c-43a0-9b0c-321656be53f6",
+      "comment": "",
+      "command": "open",
+      "target": "http://poll-app5-20220113.softacad.bg/polls",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c618e26-1709-4ed4-9d8c-a0fbece4d5f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x920",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b959d0f9-efc2-4a22-b7da-e2b4d619a7c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65d58a84-0622-4166-9cb8-03098d80a00c",
+      "comment": "",
+      "command": "type",
+      "target": "id=usernameOrEmail",
+      "targets": [],
+      "value": "tg3admin@test.org"
+    }, {
+      "id": "2434e077-8aa3-4bc0-9cc9-696fba1d0c1d",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "4aadb89f-31eb-434f-9453-bcae114a4e06",
+      "comment": "",
+      "command": "click",
+      "target": "name=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b751e075-a45d-4fe9-839e-76ac5cffce5f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@class='nav-link']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "206f24d2-d1f2-4cbf-a942-55587c217ece",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(7);",
+      "targets": [],
+      "value": "question"
+    }, {
+      "id": "5d765317-2a77-415a-af33-5701c3f82294",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(7);",
+      "targets": [],
+      "value": "choice1"
+    }, {
+      "id": "0d2bd602-1c4e-41a4-83e9-aa3509cc9eb3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(7);",
+      "targets": [],
+      "value": "choice2"
+    }, {
+      "id": "5c92e8ab-a6d0-4189-80d3-87e0d9588f0f",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//textarea",
+      "targets": [],
+      "value": "${question}"
+    }, {
+      "id": "b27aed05-0d58-4f13-bd29-462d47519b0e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(7);",
+      "targets": [],
+      "value": "choice1"
+    }, {
+      "id": "bbfb35b9-57e2-46a1-9ede-2a43250a41a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.random().toString(36).substring(7);",
+      "targets": [],
+      "value": "choice2"
+    }, {
+      "id": "9ad0b726-38a5-4e02-994d-ad9a164a8eb4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//textarea",
+      "targets": [],
+      "value": "${question}"
+    }, {
+      "id": "437aca6f-f89e-4320-b92d-46b899d6bff1",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Choice 1']",
+      "targets": [],
+      "value": "${choice1}"
+    }, {
+      "id": "06c94d2e-2842-40fa-b9f2-c8f319cd7e48",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@placeholder='Choice 2']",
+      "targets": [],
+      "value": "${choice2}"
+    }, {
+      "id": "09ca347b-5d4d-4bf0-a9d3-a0c26c71adeb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b2e5ddb-91ac-4f61-9f3c-9bf5e0b028a6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//label[@class='pl-2'][contains(text(),\"${choice1}\")]",
+      "targets": [],
+      "value": "${choice1}"
+    }]
+  }],
+  "suites": [{
+    "id": "afb88c8e-0cb3-411e-89cd-ecf8a22cc589",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7f132515-ed5a-4908-8f76-2b84dd1db105"]
+  }],
+  "urls": ["http://poll-app5-20220113.softacad.bg/polls"],
+  "plugins": []
+}
